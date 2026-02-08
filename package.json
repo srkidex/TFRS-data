@@ -1,0 +1,11 @@
+{
+  "name": "srkidex-txt-format-rs",
+  "main": "TFRS-data-main/index.html",
+  "window": {
+    "width": 320,
+    "height": 580,
+    "title": "TXT-FORMAT-RS",
+    "position": "center",
+    "resizable": false
+  }
+}

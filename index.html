@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TXT-FORMAT-RS</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <div class="container mt-1">
+    <div class="row">
+
+        <div class="col-sm-12 text-center">
+            <h1>TXT-FORMAT-RS</h1>
+        </div>
+        <div class="col-6">
+            <button id="myBtn">Info</button>
+        </div>
+        <div class="col-6">
+            <h2>by <a href="https://srki-dex.rs" data-external-link>srki-dex.rs</a></h2>
+        </div>
+    
+        <input class="col-12 mt-3" type="button" class="btn btn-primary" id="" value="Paste">
+
+        <input class="col-6 mt-3" type="button" class="btn btn-primary" id="" value="all small">
+        <input class="col-6 mt-3" type="button" class="btn btn-primary" id="" value="ALL CAPS">
+
+        <input class="col-6 mt-2" type="button" class="btn btn-primary" id="" value="Capitalize Sentences">
+        <input class="col-6 mt-2" type="button" class="btn btn-primary" id="" value="Words Capitalized">
+
+        <input class="col-6 mt-3" type="button" class="btn btn-primary" id="" value="Latin 2 Cyrillic">
+        <input class="col-6 mt-3" type="button" class="btn btn-primary" id="" value="Cyrillic 2 Latin">
+
+        <textarea class="col-12 mt-2" id="TXT" placeholder="Input text here..."></textarea>
+
+        <input class="col-6 mt-2" type="button" class="btn btn-primary" id="" value="Copy">
+        <input class="col-6 mt-2" type="button" class="btn btn-primary" id="" value="Clear">
+
+        <hr>
+
+        <div class="col-6 text-center">
+            <div class="col-12">No. of Chars</div>
+            <div id="chars" class="col-12">0</div>
+        </div>
+
+        <div class="col-6 text-center">
+            <div class="col-12">No. of Words</div>
+            <div id="words" class="col-12">0</div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+
+            <div class="modal-content">
+                <b>all small</b> - all letters in lowercase
+                <br><br>
+                <b>ALL CAPS</b> - all letters in uppercase
+                <br><br>
+                <b>Capitalize Sentences</b> - first letter of each sentence in uppercase, the rest in lowercase
+                <br><br>
+                <b>Words Capitalized</b> - first letter of each word in uppercase, the rest in lowercase
+                <br><br>
+                <b>Serbian conversion</b> -  Latin letters to Cyrillic (e.g. "a" to "а", "b" to "б", etc.)
+                <br>
+                - Cyrillic letters to Latin (e.g. "а" to "a", "б" to "b", etc.)
+            </div>
+            <span class="close">&times;</span>
+        </div>
+
+    </div>
+    </div>
+
+<script>
+// MODAL HANDLER
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+// EXTERNAL LINKS HANDLER
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Select all elements marked for external linking
+    const externalLinks = document.querySelectorAll('[data-external-link]');
+
+    externalLinks.forEach(link => {
+        link.addEventListener('click', (evt) => {
+            // Prevent the default NW.js navigation behavior
+            evt.preventDefault();
+            // Get the URL from the href attribute
+            const url = evt.currentTarget.href;
+            // Open the URL in the system's default browser
+            nw.Shell.openExternal(url);
+        });
+    });
+});
+</script>
+</body>
+</html>
