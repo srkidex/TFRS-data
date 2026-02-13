@@ -2,7 +2,7 @@
 
 **(You need to know to run: Downloading Files, Zip / UnZip Files, Cut / Move and Copy / Pate Operations)**
 
-Text Format is a NW.js web / js app that formats text via COPY / PASTE to:
+Text Format RS is a NW.js web / js app that formats text via COPY / PASTE to:
 
 1. small caps
 
@@ -17,7 +17,7 @@ Text Format is a NW.js web / js app that formats text via COPY / PASTE to:
 6. Letters from RS (Serbian) Cyrillic to Latin
 ---
 
-# BONUS INFO BUTTON to tell YOU THIS:
+# BONUS INFO BUTTON to tell YOU ALL THIS AGAIN:
 
 all small- all letters in lowercase
 
