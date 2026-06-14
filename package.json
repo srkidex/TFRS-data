@@ -1,5 +1,5 @@
 {
-  "name": "srkidex-txt-format-rs",
+  "name": "srkidex-text-format-rs",
   "main": "TFRS-data-main/index.html",
   "window": {
     "width": 320,
